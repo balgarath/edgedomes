@@ -5,10 +5,11 @@ git commit -a -m 'generating static files' || echo 0
 git push && \
 git checkout gh-pages && \
 rm -Rf public/*
-git checkout master -- public/* && \
 rm *.html
 rm -rf assets
-cp -Rf public/*
+git checkout master -- public/* 
+
+cp -Rf public/* .
 (git commit -m "syncing gh-pages branch to master" || echo 0)&& \
 git push && \
 git checkout master
