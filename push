@@ -10,6 +10,7 @@ rm -rf assets
 git checkout master -- public/* 
 
 cp -Rf public/* .
+git add ./* || echo 0
 (git commit -m "syncing gh-pages branch to master" || echo 0)&& \
 git push && \
 git checkout master
