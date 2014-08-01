@@ -1,12 +1,14 @@
 #!/bin/bash
-
+ruby run.rb
+git add .
+git commit -a -m 'generating static files'
 git push && \
 git checkout gh-pages && \
 
 git checkout master -- public/* && \
 cp -Rf public/* .
 rm -rf public
-git add ./*
+git add ./public/*
 git commit -m "syncing gh-pages branch to master" && \
 git push && \
 git checkout master
