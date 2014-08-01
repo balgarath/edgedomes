@@ -27,7 +27,7 @@ def active(page, active_page)
 end
 
 #clear out the folder
-`rm public/*.html`
+`rm public/*.html || 0`
 
 #generate pages here
 for page in pages
