@@ -1,0 +1,2 @@
+ssh squid "cp -Rf --remove-destination edgedomes edgedomes.bkp && rm -rf edgedomes"
+cd .. && scp -r edgedomes/ squid:edgedomes
