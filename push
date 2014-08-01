@@ -6,7 +6,6 @@ git push && \
 git checkout gh-pages && \
 rm -Rf public/*
 rm *.html
-rm -rf assets
 git checkout master -- public/* 
 
 cp -Rf public/* .
