@@ -1,0 +1,8 @@
+#!/bin/bash
+
+git push
+git checkout gh-pages
+git checkout master -- static/*
+git commit -m "syncing gh-pages branch to master"
+git push
+git checkout master
