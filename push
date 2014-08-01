@@ -6,8 +6,9 @@ git push && \
 git checkout gh-pages && \
 
 git checkout master -- public/* && \
+rm *.html
+rm -rf assets
 cp -Rf public/* .
-git add ./public/*
 git commit -m "syncing gh-pages branch to master" && \
 git push && \
 git checkout master
